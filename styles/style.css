@@ -38,7 +38,7 @@ p{
 
 /* main fonts */
 h1{
-    font-size: 52px;
+    font-size: 48px;
     font-weight: 800;
 }
 h2{
@@ -316,10 +316,9 @@ header{
 
 /* start of hero */
 .hero-wrapper{
-    padding: 2em 0em;
+    padding: 12em 1em 4em 1em;
 }
 .hero{
-    margin-top: 200px !important;
     max-width: 1180px;
     background: rgb(250,248,248);
     background: linear-gradient(126deg, rgba(250,248,248,1) 70%, rgba(255,255,255,1) 70%);
@@ -350,8 +349,10 @@ header{
     max-width: 25em;
 }
 @media screen and (min-width: 0px) and (max-width: 432px){
+    .hero-wrapper{
+        padding: 10em 1em 4em 1em;
+    }
     .hero{
-        margin-top: 8em !important;
         max-width: 1232px;
         background: var(--main);
         flex-direction: column;
@@ -382,8 +383,10 @@ header{
     }
 }
 @media screen and (min-width: 0px) and (max-width: 1000px) {
+    .hero-wrapper{
+        padding: 10em 1em 4em 1em;
+    }
     .hero{
-        margin-top: 8em !important;
         max-width: 1232px;
         background: var(--main);
         flex-direction: column;
@@ -561,7 +564,129 @@ header{
 }
 /* end of timeline */
 
+/* Content section 2*/
+.hero-wrapper2{
+    padding: 4em 1em 4em 1em;
+}
+.content-section .hero{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background: linear-gradient(238deg, rgba(250,248,248,1) 70%, rgba(255,255,255,1) 70%);
+    padding: 2em 0em;
+    margin-top: 1em;
+}
+.content-section .hero--content div:nth-child(1) {
+    margin-top: -90px;
+    margin-left: 215px;
+}
+.content-section .hero--content div:nth-child(2) {
+    padding-right: 2em;
+}
+@media screen and (min-width: 0px) and (max-width: 432px){
+    .content-section .hero--content div:nth-child(1){
+        position: absolute;
+        margin-top: -20px !important;
+    }
+    .content-section .hero--content div:nth-child(2) {
+        padding-right: 0em;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+    .hero-wrapper2 {
+        padding: 2em 1em 4em 1em;
+    }
+    .content-section .hero{
+        max-width: 1232px;
+        background: var(--main);
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0em 02em 0em 0em;
+        align-items: center;
+        gap: 2em;
+    }
+    .content-section .hero--content {
+        background-color: var(--main);
+        max-width: 35em;
+    }
+    .content-section .hero--content div:nth-child(1){
+        position: absolute;
+        margin-top: -3em;
+        margin-left: 0;
+    }
+    .content-section .hero--content div h3{
+        margin: 0.5em 0em;
+    }
+    .content-section .hero--content div h1{
+        margin: 0.5em 0em;
+    }
+    .content-section .hero--image img {
+        max-width: 20em;
+    }
+}
+/* End of Content section 2*/
 
+/* review section */
+.review--section{
+    padding: 2em 0em;
+}
+.review--section .wrapper {
+    max-width: 1232px;
+    margin: 0 auto;
+}
+.review--section .reviews {
+    padding: 1em 0em;
+    display: flex;
+    gap: 1em;
+}
+
+.review--section .reviews article{
+    padding: 1.2em;
+    border-radius: 0.5em;
+    box-shadow: 0 0px 10px 1px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.15em;
+}
+.review--section .reviews article h3{
+    margin: 0px;
+}
+.review--section .previous{
+    background-color: var(--primary) ;
+}
+.review--section .next{
+    background-color: var(--dark);
+}
+@media screen and (min-width: 0px) and (max-width: 432px) {
+    .review--section .wrapper {
+        padding: 0em 1em;
+    }
+    .review--section .reviews {
+        overflow: scroll;
+       
+    }
+    .review--section .reviews article{
+       min-width: 15em;
+       height: 20em;
+    }
+    .review--section{
+        padding: 2em 0em 4em 0em;
+    }
+
+}
+@media screen and (min-width: 432px) and (max-width: 1000px) {
+    .review--section .wrapper {
+        padding: 0em 1em;
+    }
+    .review--section .reviews {
+        overflow: scroll;
+       
+    }
+    .review--section .reviews article{
+       min-width: 25em;
+       height: 20em;
+    }
+}
+/* end of review section */
 /* footer */
 footer{
     background-color: var(--secondary);

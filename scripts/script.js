@@ -23,3 +23,29 @@ function scrollCarousel(direction) {
         behavior: 'smooth',
     });
 }
+
+const reviews = document.querySelectorAll('.review');
+const containerr = document.querySelector('.reviews');
+const nextButtons = document.querySelectorAll('.next');
+const previousButtons = document.querySelectorAll('.previous');
+
+nextButtons.forEach(button => button.addEventListener('click', () => scrollCarousel2(-1)));
+previousButtons.forEach(button => button.addEventListener('click', () => scrollCarousel2(1)));
+
+function scrollCarousel2(direction) {
+    const articleWidth = containerr.clientWidth;
+    const scrollAmount = direction * articleWidth;
+    const currentScrollPosition = containerr.scrollLeft;
+
+    let targetScrollPosition;
+    if (direction === 1) {
+        targetScrollPosition = currentScrollPosition + articleWidth;
+    } else {
+        targetScrollPosition = currentScrollPosition - articleWidth;
+    }
+
+    containerr.scrollTo({
+        left: targetScrollPosition,
+        behavior: 'smooth',
+    });
+}
